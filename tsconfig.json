@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "ESNext"], // DOM is needed for React types
+    "jsx": "react-jsx",       // important for React 17+ JSX transform
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],          // include your source files
+  "exclude": ["node_modules"]
+}
