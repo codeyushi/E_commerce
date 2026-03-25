@@ -1,73 +1,95 @@
-# React + TypeScript + Vite
+# ShopFlow - E-Commerce Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ShopFlow is a dynamic, high-performance e-commerce storefront built with React, focused on delivering a smooth and responsive user experience with advanced filtering and state management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo at Netlify
 
-## React Compiler
+https://shopflow-commerce.netlify.app
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+* React with TypeScript
+* CSS (Flexbox and Responsive Design)
+* Framer Motion
+* FakeStoreAPI
+* React Router DOM
+* Context API
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Node.js (v18 or higher)
+* npm or yarn
+
+### Setup
+
+```bash 
+git clone https://github.com/codeyushi/E_commerce
+cd E_Commerce
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Application will run on:
+http://localhost:5173
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Features
+
+### Custom UI and Branding
+
+* Designed and integrated a custom ShopFlow logo
+* Responsive navbar with stable layout
+* Filters remain accessible across screen sizes
+
+---
+
+### Cart Functionality
+
+* Global cart implemented using Context API
+* Real-time cart item count update
+* Empty cart state with user guidance
+
+---
+
+### Filtering and Sorting
+
+* Multi-category filtering using URL parameters
+* Price sorting (Low to High / High to Low)
+* Filter state persists on refresh using useSearchParams
+
+---
+
+### Animations
+
+* Page transitions using Framer Motion
+* Staggered product animations
+* Hover effects on product cards
+
+---
+
+### Layout Optimization
+
+* Flexbox-based responsive grid
+* Equal-height product cards
+* Consistent alignment of action buttons
+
+---
+
+## Technical Decisions
+
+* API calls managed with useEffect
+* Parallel fetching using Promise.all
+* URL-based state management for filters
+* Modular and scalable project structure
+
+---
+
+
