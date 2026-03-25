@@ -4,7 +4,7 @@
     "module": "ESNext",
     "lib": ["DOM", "ESNext"], // DOM is needed for React types
     "jsx": "react-jsx",       // important for React 17+ JSX transform
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true
